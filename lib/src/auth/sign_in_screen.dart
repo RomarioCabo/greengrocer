@@ -83,6 +83,7 @@ class SignInScreen extends StatelessWidget {
                     const CustomTextField(
                       icon: Icons.email,
                       label: "Email",
+                      keyboardType: TextInputType.emailAddress,
                     ),
                     const CustomTextField(
                       icon: Icons.lock,

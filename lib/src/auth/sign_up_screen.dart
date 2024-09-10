@@ -58,6 +58,7 @@ class SignUpScreen extends StatelessWidget {
                         const CustomTextField(
                           icon: Icons.email,
                           label: "Email",
+                          keyboardType: TextInputType.emailAddress,
                         ),
                         const CustomTextField(
                           icon: Icons.lock,
@@ -72,11 +73,13 @@ class SignUpScreen extends StatelessWidget {
                           icon: Icons.call,
                           label: "Celular",
                           inputFormatters: [phoneFormatter],
+                          keyboardType: TextInputType.phone,
                         ),
                         CustomTextField(
                           icon: Icons.file_copy,
                           label: "CPF",
                           inputFormatters: [cpfFormatter],
+                          keyboardType: TextInputType.number,
                         ),
                         SizedBox(
                           height: 50,
