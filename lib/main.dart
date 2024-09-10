@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/auth/sign_in_screen.dart';
+import 'package:greengrocer/src/config/custom_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: CustomColors.customSwatchColor,
+        ),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
