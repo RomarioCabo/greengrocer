@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/config/app_dart.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 
 import 'components/category_tile.dart';
@@ -11,14 +12,6 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  List<String> categories = [
-    'Frutas',
-    'Grãos',
-    'Verduras',
-    'Temperos',
-    'Cereais',
-  ];
-
   late String selectedCategory = '';
 
   @override
@@ -133,6 +126,22 @@ class _HomeTabState extends State<HomeTab> {
                     });
                   },
                 );
+              },
+            ),
+          ),
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              physics: const BouncingScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 9 / 11.5,
+              ),
+              itemCount: items.length,
+              itemBuilder: (_, index) {
+                return Container(color: Colors.red,);
               },
             ),
           ),
